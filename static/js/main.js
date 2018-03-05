@@ -73,3 +73,9 @@
 
 		}
 		
+		function gitlabHover(){
+			var x = document.getElementById("prompt");
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./gitlab.sh</span>";
+
+		}
+		
