@@ -147,6 +147,12 @@ body {
 	color:white;
 }
 
+#skipChoice {
+	text-align: right;
+	padding-right: 30px;
+}
+
+
 #cursor {
   animation: blinker .5s linear infinite;
   color:white;

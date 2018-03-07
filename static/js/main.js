@@ -6,30 +6,17 @@
 			backSpeed: 0,
 		};
 			
-		var options2 = {
-			stringsElement: '#typed-strings2',
-			typeSpeed: 5,
-			cursorChar: '<span id="cursor">|</span>',
-            showCursor: true,
-			backSpeed: 0,
-		};
 		
 		var typed = new Typed('#typed', options);
-		var typed2 = new Typed('#typed2', options2);
-		
-		typed2.stop()
 		
 		function showWindow1(){
 			var x = document.getElementById("resume");
 			x.style.display="block";
-			typed2.start()
 		}
 		
 		function closeWindow1(){
 			var x = document.getElementById("resume");
 			x.style.display="none";	
-			typed2.reset();
-			typed2.stop()
 		}
 		
 		function clearPrompt(){
@@ -77,5 +64,15 @@
 			var x = document.getElementById("prompt");
 			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./gitlab.sh</span>";
 
+		}
+		
+		function skipIntro(){
+			typed.destroy()
+			var x = document.getElementById("typed");
+			var y = document.getElementById("menu");
+			x.innerHTML = y.innerHTML;
+			
+			var skipLink = document.getElementById("skipChoice");
+			skipLink.style.display="none";
 		}
 		
