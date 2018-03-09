@@ -2,7 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Cantarell:700|Open+Sans:300&subset=cyrillic-ext);
 
 body {
-    background-color: gray;
+	background: rgb(41,132,204);
+	background: linear-gradient(0deg, rgba(41,132,204,1) 0%, rgba(20,65,102,1) 29%, rgba(0,0,0,1) 56%);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /*--TERMINAL HOLDER--*/
