@@ -61,10 +61,11 @@
 						<a href="#" onclick="showWindow1()" onmouseover="resumeHover()" onmouseout="clearPrompt()">1 - Resume</a><br>
 						<a href="http://scr.im/m5v" title="Reveal this e-mail address" onmouseover="emailHover()" onmouseout="clearPrompt()">2 - Email</a><br>
 						<a href="https://blog.divby0.net" onmouseover="blogHover()" onmouseout="clearPrompt()">3 - Blog</a><br>
-						<a href="https://www.linkedin.com/in/davidlockwood1/" onmouseover="linkedinHover()" onmouseout="clearPrompt()">4 - LinkedIn</a><br>
-						<a href="https://www.facebook.com/dave.r.lockwood" onmouseover="facebookHover()" onmouseout="clearPrompt()">5 - Facebook</a><br>
-						<a href="skype:dave.r.lockwood?call" onmouseover="skypeHover()" onmouseout="clearPrompt()">6 - Skype</a><br>
-						<a href="https://gitlab.com/Deamos" onmouseover="gitlabHover()" onmouseout="clearPrompt()">7 - GitLab</a><br>
+						<a href="#" onclick="showWindow2()" onmouseover="projectsHover()" onmouseout="clearPrompt()">4 - Projects</a><br>
+						<a href="https://www.linkedin.com/in/davidlockwood1/" onmouseover="linkedinHover()" onmouseout="clearPrompt()">5 - LinkedIn</a><br>
+						<a href="https://www.facebook.com/dave.r.lockwood" onmouseover="facebookHover()" onmouseout="clearPrompt()">6 - Facebook</a><br>
+						<a href="skype:dave.r.lockwood?call" onmouseover="skypeHover()" onmouseout="clearPrompt()">7 - Skype</a><br>
+						<a href="https://gitlab.com/Deamos" onmouseover="gitlabHover()" onmouseout="clearPrompt()">8 - GitLab</a><br>
 						<br>				
 						<span id="prompt">guest@davelockwood.net:~$ </span>
 					</span>
@@ -135,9 +136,31 @@
 				</div>
 				
 			</div>
+
+		<div class="terminal-window-layer" id="projects">
+			<div class="terminal-toolbar">
+
+				<div class="terminal-title">guest@davelockwood.net - Projects</div>
+				<div class="terminal-buttons">
+					<div class="closeButton"><a href="#" onclick="closeWindow2()"><span>&#10006;</span></a></div>
+				</div>
+			</div>
+			<div class="terminal-body"><span id="typed2">
+				<p>
+					Current Projects:<br>
+					<br>
+					<b>Title:</b> Open Streaming Platform<br>
+					<b>URL:</b> <a href="https://gitlab.com/Deamos/flask-nginx-rtmp-manager">GitLab Link</a><br>
+					<b>Description:</b> Open Streaming Platform (OSP) is an open-source, RTMP streamer software front-end for Arut's NGINX RTMP Module. Designed as a self-hosted alternative to services like Twitch.tv, Ustream.tv, and Youtube Live.<br>
+				</p>
+				</span>
+			</div>
+
 		</div>
+
+	</div>
 		
-		<script src="static/js/main.js"></script>
+	<script src="static/js/main.js"></script>
     </body>
 </html>
 

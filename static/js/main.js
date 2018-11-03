@@ -18,6 +18,16 @@
 			var x = document.getElementById("resume");
 			x.style.display="none";	
 		}
+
+		function showWindow2(){
+			var x = document.getElementById("projects");
+			x.style.display="block";
+		}
+
+		function closeWindow2(){
+			var x = document.getElementById("projects");
+			x.style.display="none";
+		}
 		
 		function clearPrompt(){
 			var x = document.getElementById("prompt");
@@ -63,6 +73,12 @@
 		function gitlabHover(){
 			var x = document.getElementById("prompt");
 			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./gitlab.sh</span>";
+
+		}
+
+		function projectsHover(){
+			var x = document.getElementById("prompt");
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./projects.sh</span>";
 
 		}
 		
