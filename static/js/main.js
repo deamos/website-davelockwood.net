@@ -36,49 +36,49 @@
 		
 		function resumeHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./resume.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./resume.sh</span>";
 
 		}
 		
 		function emailHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./email.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./email.sh</span>";
 
 		}
 		
 		function blogHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./blog.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./blog.sh</span>";
 
 		}
 		
 		function linkedinHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./linkedin.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./linkedin.sh</span>";
 
 		}
 		
 		function facebookHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./facebook.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./facebook.sh</span>";
 
 		}
 		
 		function skypeHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./skype.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./skype.sh</span>";
 
 		}
 		
 		function gitlabHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./gitlab.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./gitlab.sh</span>";
 
 		}
 
 		function projectsHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText'>./projects.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./projects.sh</span>";
 
 		}
 		
