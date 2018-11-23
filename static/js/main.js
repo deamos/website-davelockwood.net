@@ -36,49 +36,49 @@
 		
 		function resumeHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./resume.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./resume.sh^500</span>";
 
 		}
 		
 		function emailHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./email.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./email.sh^500</span>";
 
 		}
 		
 		function blogHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./blog.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./blog.sh^500</span>";
 
 		}
 		
 		function linkedinHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./linkedin.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./linkedin.sh^500</span>";
 
 		}
 		
 		function facebookHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./facebook.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./facebook.sh^500</span>";
 
 		}
 		
 		function skypeHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./skype.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./skype.sh^500</span>";
 
 		}
 		
 		function gitlabHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./gitlab.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./gitlab.sh^500</span>";
 
 		}
 
 		function projectsHover(){
 			var x = document.getElementById("prompt");
-			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./projects.sh</span>";
+			x.innerHTML = "guest@davelockwood.net:~$ <span class='termText' id='typed-strings'>./projects.sh^500</span>";
 
 		}
 		
