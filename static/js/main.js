@@ -5,7 +5,24 @@
             showCursor: true,
 			backSpeed: 0,
 		};
-			
+
+		function revealEmail() {
+			var part1 = "dave.r.lockwood";
+			var part2 = Math.pow(2, 6);
+			var part3 = String.fromCharCode(part2);
+			var part4 = "gmail.com";
+			var part5 = part1 + String.fromCharCode(part2) + part4;
+			document.getElementById('emailAddress').innerHTML = '<a href="' + 'mailto' + ':' + part5 + '">' + part1 + part3 + part4 + '</a>';
+		}
+
+		function directEmail(){
+			var part1 = "dave.r.lockwood";
+			var part2 = Math.pow(2, 6);
+			var part4 = "gmail.com";
+			var part5 = part1 + String.fromCharCode(part2) + part4;
+
+			window.location.href = 'mailto' + '://' + part5;
+		}
 		
 		var typed = new Typed('#typed', options);
 		

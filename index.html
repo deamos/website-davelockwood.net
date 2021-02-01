@@ -59,7 +59,7 @@
 						davelockwood.net Website Menu<br>
 						================================================================<br>
 						<a href="#" onclick="showWindow1()" onmouseover="resumeHover()" onmouseout="clearPrompt()">1 - Resume</a><br>
-						<a href="http://scr.im/m5v" title="Reveal this e-mail address" onmouseover="emailHover()" onmouseout="clearPrompt()">2 - Email</a><br>
+						<a href="#" title="Reveal this e-mail address" onclick="directEmail();" onmouseover="emailHover()" onmouseout="clearPrompt()">2 - Email</a><br>
 						<a href="https://blog.divby0.net" onmouseover="blogHover()" onmouseout="clearPrompt()">3 - Blog</a><br>
 						<a href="#" onclick="showWindow2()" onmouseover="projectsHover()" onmouseout="clearPrompt()">4 - Projects</a><br>
 						<a href="https://www.linkedin.com/in/davidlockwood1/" onmouseover="linkedinHover()" onmouseout="clearPrompt()">5 - LinkedIn</a><br>
@@ -80,62 +80,63 @@
 					<div class="closeButton"><a href="#" onclick="closeWindow1()"><span>&#10006;</span></a></div>
 				</div>
 			</div>
-			<div class="terminal-body"><span id="typed2">
-				<p>
-					Name: Dave Lockwood<br>
-					Email Address: <a href="http://scr.im/m5v">d...@g...l.com</a><br>
-					Location: Ormond Beach, Florida<br>
-					<br>
-					Qualifications:<br>
-					&bull; Self-motivated and confident in making independent decisions <br>
-					&bull; Excellent communicator; able to clearly express ideas written and verbally <br>
-					&bull; Enthusiastic about technology; strives to learn new IT skills <br>
-					&bull; Highly dedicated, sticking to a task until completion <br>
-					&bull; Adept at problem-solving in changing environments <br>
-					&bull; CompTIA A+, CompTIA Network+, and MCTS certified <br>
-					&bull; Experienced in Linux based, Windows, Mac OS X, and Mobile Technologies. <br>
-					&bull; Understanding of C and Python Languages <br>
-					<br>
-					Employment:<br>
-					<b>IT Manager, City of Daytona Beach Shores, Daytona Beach Shores, FL (2013-Present)</b>	<br>		
-					&bull; Planned and Implemented migration of Windows Server 2003 systems to Windows Server 2008R2 and Server 2012R2		<br>
-					&bull; Established IT Systems and Server log and monitoring platform using Nagios and ELK (Elasticsearch, Logstash, Kibana) platform<br>
-					&bull; Designed and deployed VMWare ESXi 6 , vSphere virtualization cluster,  High Availability storage cluster infrastructure<br>
-					&bull; Implemented City of Daytona Beach Shores Public Safety Cisco SSL VPN and ensured compliance with FBI CJIS standards using 256-bit encryption and 2FA<br>
-					&bull; Directed deployment of Unitrends Backup Appliance system to establish city-wide IT backup policies and increasing backup retention from 1 day to 30 days<br>
-					&bull; Planned and implemented city-wide phone system migration from Nortel BCM-based PBX to Brighthouse Networks Hosted Voice<br>
-					&bull; Implemented Microsoft Deployment Toolkit to establish baseline images for new workstations, laptops, and servers<br>
-					&bull; Managed Windows Server Update Services for client and server systems to ensure up-to-date patches were applied<br>
-					&bull; Developed the City of Daytona Beach Shores Website and online web payment site, Shores Pay<br>
-					<br>
-					<b>Technical Support Analyst I, Halifax Health, Daytona Beach, FL (2012)</b><br>
-					&bull; Provided Hardware, Software, and Network Support to Hospital Employees and Volunteers using Windows XP, Windows 7, and Windows Server 2003 and 2008<br>
-					&bull; Maintained Highest Closed Support Tickets for 4 months straight, completing over 150 work orders weekly <br> 
-					<br>
-					<b>Information Technology Support Intern, City of Daytona Beach, Daytona Beach, FL, (2010)</b><br>
-					&bull; Performed installation, repair, and maintenance of Microsoft Windows XP and Windows Server 2003  systems for city departments<br>
-					&bull; Used Windows Server 2003 Active Directory for adding, changing, and removal of user accounts<br>
-					<br>
-					<b>On-Site Information Systems Specialist, Fast Teks, Port Orange, FL, (2008-2009)</b><br>
-					&bull; Provided on-site support for networking, computer repair, and point-of-sale equipment to local commercial and residential customers<br>
-					&bull; Removed malicious spyware, rootkits, and other malware from over 500 business and personal computers<br>
-					<br>
-					<b>Munitions Storage Crew Chief, United States Air Force, (2001-2007)</b><br>
-					&bull; Managed storage requirements for more than 200 munitions custodian accounts worth $75 million dollars<br>
-					<br>
-					Education:<br>
-					Daytona State College, Daytona Beach, FL — 2007-2012<br>
-					&bull; B.S. Engineering Technology - Information Systems Technology concentration: Network security, incident response, and digital forensics; 3.9 GPA<br>
-					&bull; A.S. Networking Services Technology: Network design, TCP/IP, Linux and Windows server administration; 3.9 GPA<br>
-					&bull; A.S. Computer Engineering Technology: Computer repair and design, premise cabling, electronic theory, microprocessor architecture; 3.9 GPA<br>
-					<br>
-					<br>
-					<br>
-				</p>
+			<div class="terminal-body">
+				<span id="typed2">
+					<p>
+						Name: Dave Lockwood<br>
+						Email Address: <span id="emailAddress" style="text-decoration: underline;" onclick="revealEmail();">d....@.....com</span><br>
+						Location: Ormond Beach, Florida<br>
+						<br>
+						Qualifications:<br>
+						&bull; Self-motivated and confident in making independent decisions <br>
+						&bull; Excellent communicator; able to clearly express ideas written and verbally <br>
+						&bull; Enthusiastic about technology; strives to learn new IT skills <br>
+						&bull; Highly dedicated, sticking to a task until completion <br>
+						&bull; Adept at problem-solving in changing environments <br>
+						&bull; CompTIA A+, CompTIA Network+, and MCTS certified <br>
+						&bull; Experienced in Linux based, Windows, Mac OS X, and Mobile Technologies. <br>
+						&bull; Understanding of C and Python Languages <br>
+						<br>
+						Employment:<br>
+						<b>IT Manager, City of Daytona Beach Shores, Daytona Beach Shores, FL (2013-Present)</b>	<br>
+						&bull; Planned and Implemented migration of Windows Server 2003 systems to Windows Server 2008R2 and Server 2012R2		<br>
+						&bull; Established IT Systems and Server log and monitoring platform using Nagios and ELK (Elasticsearch, Logstash, Kibana) platform<br>
+						&bull; Designed and deployed VMWare ESXi 6 , vSphere virtualization cluster,  High Availability storage cluster infrastructure<br>
+						&bull; Implemented City of Daytona Beach Shores Public Safety Cisco SSL VPN and ensured compliance with FBI CJIS standards using 256-bit encryption and 2FA<br>
+						&bull; Directed deployment of Unitrends Backup Appliance system to establish city-wide IT backup policies and increasing backup retention from 1 day to 30 days<br>
+						&bull; Planned and implemented city-wide phone system migration from Nortel BCM-based PBX to Brighthouse Networks Hosted Voice<br>
+						&bull; Implemented Microsoft Deployment Toolkit to establish baseline images for new workstations, laptops, and servers<br>
+						&bull; Managed Windows Server Update Services for client and server systems to ensure up-to-date patches were applied<br>
+						&bull; Developed the City of Daytona Beach Shores Website and online web payment site, Shores Pay<br>
+						<br>
+						<b>Technical Support Analyst I, Halifax Health, Daytona Beach, FL (2012)</b><br>
+						&bull; Provided Hardware, Software, and Network Support to Hospital Employees and Volunteers using Windows XP, Windows 7, and Windows Server 2003 and 2008<br>
+						&bull; Maintained Highest Closed Support Tickets for 4 months straight, completing over 150 work orders weekly <br>
+						<br>
+						<b>Information Technology Support Intern, City of Daytona Beach, Daytona Beach, FL, (2010)</b><br>
+						&bull; Performed installation, repair, and maintenance of Microsoft Windows XP and Windows Server 2003  systems for city departments<br>
+						&bull; Used Windows Server 2003 Active Directory for adding, changing, and removal of user accounts<br>
+						<br>
+						<b>On-Site Information Systems Specialist, Fast Teks, Port Orange, FL, (2008-2009)</b><br>
+						&bull; Provided on-site support for networking, computer repair, and point-of-sale equipment to local commercial and residential customers<br>
+						&bull; Removed malicious spyware, rootkits, and other malware from over 500 business and personal computers<br>
+						<br>
+						<b>Munitions Storage Crew Chief, United States Air Force, (2001-2007)</b><br>
+						&bull; Managed storage requirements for more than 200 munitions custodian accounts worth $75 million dollars<br>
+						<br>
+						Education:<br>
+						Daytona State College, Daytona Beach, FL — 2007-2012<br>
+						&bull; B.S. Engineering Technology - Information Systems Technology concentration: Network security, incident response, and digital forensics; 3.9 GPA<br>
+						&bull; A.S. Networking Services Technology: Network design, TCP/IP, Linux and Windows server administration; 3.9 GPA<br>
+						&bull; A.S. Computer Engineering Technology: Computer repair and design, premise cabling, electronic theory, microprocessor architecture; 3.9 GPA<br>
+						<br>
+						<br>
+						<br>
+					</p>
 				</span>
-				</div>
-				
 			</div>
+				
+		</div>
 
 		<div class="terminal-window-layer" id="projects">
 			<div class="terminal-toolbar">
@@ -145,31 +146,32 @@
 					<div class="closeButton"><a href="#" onclick="closeWindow2()"><span>&#10006;</span></a></div>
 				</div>
 			</div>
-			<div class="terminal-body"><span id="typed2">
-				<p>
-					Current Projects:<br>
-					<br>
-					<b>Title:</b> Open Streaming Platform<br>
-					<b>Website:</b> <a href="https://openstreamingplatform.com">https://openstreamingplatform.com</a><br>
-					<b>Source Code:</b> <a href="https://gitlab.com/Deamos/flask-nginx-rtmp-manager">GitLab Link</a><br>
-					<b>Description:</b>Open Streaming Platform (OSP) is an open-source, RTMP streamer software front-end for Arut's Nginx-RTMP Module. OSP was designed as a self-hosted alternative to services such as Twitch.tv, Ustream.tv, Mixer, and Youtube Live.<br>
-					<br>OSP uses Python 3, the Flask Micro-Framework, Nginx-RTMP, VideoJS, Bootstrap, and other modules to build a home for your live streams, videos, and community.<br>
-					<br><b>Features:</b>
-					<ul>
-						<li>RTMP Streaming from an input source like Open Broadcast Software (OBS)</li>
-						<li>Multiple Channels per User, allowing a single user to broadcast multiple streams at the same time without needing multiple accounts</li>
-						<li>Video Stream Recording and On-Demand Playback</li>
-						<li>Per Channel Real-Time Chat for Video Streams</li>
-						<li>Manual Video Uploading of MP4s that are sourced outside of OSP</li>
-						<li>Real-Time Chat Moderation by Channel Owners (Banning/Unbanning)</li>
-						<li>Protected Streams to allow access only to the audience you want</li>
-						<li>Live Channels - Keep chatting and hang out when a stream isn't on</li>
-						<li>Webhooks - Connect OSP to other services via fully customizable HTTP requests which will pass information</li>
-						<li>Embed you stream or video directly into another web page easily</li>
-						<li>Share channels or videos via Facebook or Twitter quickly</li>
-						<li>Ability to Customize the UI as a Theme for your own personal look</li>
-					</ul>
-				</p>
+			<div class="terminal-body">
+				<span id="typed2">
+					<p>
+						Current Projects:<br>
+						<br>
+						<b>Title:</b> Open Streaming Platform<br>
+						<b>Website:</b> <a href="https://openstreamingplatform.com">https://openstreamingplatform.com</a><br>
+						<b>Source Code:</b> <a href="https://gitlab.com/Deamos/flask-nginx-rtmp-manager">GitLab Link</a><br>
+						<b>Description:</b>Open Streaming Platform (OSP) is an open-source, RTMP streamer software front-end for Arut's Nginx-RTMP Module. OSP was designed as a self-hosted alternative to services such as Twitch.tv, Ustream.tv, Mixer, and Youtube Live.<br>
+						<br>OSP uses Python 3, the Flask Micro-Framework, Nginx-RTMP, VideoJS, Bootstrap, and other modules to build a home for your live streams, videos, and community.<br>
+						<br><b>Features:</b>
+						<ul>
+							<li>RTMP Streaming from an input source like Open Broadcast Software (OBS)</li>
+							<li>Multiple Channels per User, allowing a single user to broadcast multiple streams at the same time without needing multiple accounts</li>
+							<li>Video Stream Recording and On-Demand Playback</li>
+							<li>Per Channel Real-Time Chat for Video Streams</li>
+							<li>Manual Video Uploading of MP4s that are sourced outside of OSP</li>
+							<li>Real-Time Chat Moderation by Channel Owners (Banning/Unbanning)</li>
+							<li>Protected Streams to allow access only to the audience you want</li>
+							<li>Live Channels - Keep chatting and hang out when a stream isn't on</li>
+							<li>Webhooks - Connect OSP to other services via fully customizable HTTP requests which will pass information</li>
+							<li>Embed you stream or video directly into another web page easily</li>
+							<li>Share channels or videos via Facebook or Twitter quickly</li>
+							<li>Ability to Customize the UI as a Theme for your own personal look</li>
+						</ul>
+					</p>
 				</span>
 			</div>
 
