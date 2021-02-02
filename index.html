@@ -12,7 +12,7 @@
 		
     </head>
     <body>
-		<div class="terminal-window">
+		<div class="terminal-window" id="mainWindow">
 			<div class="terminal-toolbar">
 				<div class="terminal-title">guest@davelockwood.net</div>
 				<div class="terminal-buttons">
@@ -29,8 +29,8 @@
 			<div id="typed-strings">
 				<p>
 					guest@davelockwood.net:~$ ^2000 <span class='termText'> .^200/^200w^200e^200l^200c^200o^200m^200e^200S^200c^200r^200i^200p^200t^200.^200s^200h</span><br>
-					Loading:^500.^500.^500.^500.^500.^500.^500.^500.<br>
-					<br>^200
+					Loading:^150.^150.^150.^150.^150.^150.^150.^150.<br>
+					<br>^100
 				</p>
 				<p>
 					Hi, I'm Dave. <br>
@@ -54,7 +54,7 @@
 					<br>
 					
 					guest@davelockwood.net:~$ ^2000 <span class='termText'> .^200/^200m^200e^200n^200u^200.^200s^200h</span><br>
-					<br>
+					<br>^100
 					<span id="menu">
 						davelockwood.net Website Menu<br>
 						================================================================<br>
@@ -72,7 +72,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="terminal-window-layer" id="resume">
+		<div class="terminal-window" id="resume" style="display: none; top:52%;">
 			<div class="terminal-toolbar">
 
 				<div class="terminal-title">guest@davelockwood.net - Resume</div>
@@ -98,12 +98,12 @@
 						&bull; Understanding of C and Python Languages <br>
 						<br>
 						Employment:<br>
-						<b>IT Manager, City of Daytona Beach Shores, Daytona Beach Shores, FL (2013-Present)</b>	<br>
-						&bull; Planned and Implemented migration of Windows Server 2003 systems to Windows Server 2008R2 and Server 2012R2		<br>
+						<b>IT Manager, City of Daytona Beach Shores, Daytona Beach Shores, FL (2013-Present)</b><br>
+						&bull; Planned and Implemented migration of Windows Server 2003 systems to Windows Server 2008R2 and Server 2012R2<br>
 						&bull; Established IT Systems and Server log and monitoring platform using Nagios and ELK (Elasticsearch, Logstash, Kibana) platform<br>
-						&bull; Designed and deployed VMWare ESXi 6 , vSphere virtualization cluster,  High Availability storage cluster infrastructure<br>
+						&bull; Designed and deployed VMWare ESXi 7 , vSphere virtualization cluster,  High Availability storage cluster infrastructure<br>
 						&bull; Implemented City of Daytona Beach Shores Public Safety Cisco SSL VPN and ensured compliance with FBI CJIS standards using 256-bit encryption and 2FA<br>
-						&bull; Directed deployment of Unitrends Backup Appliance system to establish city-wide IT backup policies and increasing backup retention from 1 day to 30 days<br>
+						&bull; Directed deployment of Veeam Backup system to establish city-wide IT backup policies and increasing backup retention from 1 day to 90 days<br>
 						&bull; Planned and implemented city-wide phone system migration from Nortel BCM-based PBX to Brighthouse Networks Hosted Voice<br>
 						&bull; Implemented Microsoft Deployment Toolkit to establish baseline images for new workstations, laptops, and servers<br>
 						&bull; Managed Windows Server Update Services for client and server systems to ensure up-to-date patches were applied<br>
@@ -138,7 +138,7 @@
 				
 		</div>
 
-		<div class="terminal-window-layer" id="projects">
+		<div class="terminal-window" id="projects" style="display: none;top:52%;">
 			<div class="terminal-toolbar">
 
 				<div class="terminal-title">guest@davelockwood.net - Projects</div>
@@ -154,6 +154,7 @@
 						<b>Title:</b> Open Streaming Platform<br>
 						<b>Website:</b> <a href="https://openstreamingplatform.com">https://openstreamingplatform.com</a><br>
 						<b>Source Code:</b> <a href="https://gitlab.com/Deamos/flask-nginx-rtmp-manager">GitLab Link</a><br>
+						<b>Discord Community:</b> <a href="https://discord.gg/Jp5rzbD">https://discord.gg/Jp5rzbD</a>
 						<b>Description:</b>Open Streaming Platform (OSP) is an open-source, RTMP streamer software front-end for Arut's Nginx-RTMP Module. OSP was designed as a self-hosted alternative to services such as Twitch.tv, Ustream.tv, Mixer, and Youtube Live.<br>
 						<br>OSP uses Python 3, the Flask Micro-Framework, Nginx-RTMP, VideoJS, Bootstrap, and other modules to build a home for your live streams, videos, and community.<br>
 						<br><b>Features:</b>
@@ -180,6 +181,54 @@
 	</div>
 		
 	<script src="static/js/main.js"></script>
+
+	<script>
+		// Make the DIV element draggable:
+		dragElement(document.getElementById("mainWindow"));
+		dragElement(document.getElementById("resume"));
+		dragElement(document.getElementById("projects"));
+
+		function dragElement(elmnt) {
+		  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+		  if (document.getElementById(elmnt.id + "header")) {
+			// if present, the header is where you move the DIV from:
+			document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+		  } else {
+			// otherwise, move the DIV from anywhere inside the DIV:
+			elmnt.onmousedown = dragMouseDown;
+		  }
+
+		  function dragMouseDown(e) {
+			e = e || window.event;
+			e.preventDefault();
+			// get the mouse cursor position at startup:
+			pos3 = e.clientX;
+			pos4 = e.clientY;
+			document.onmouseup = closeDragElement;
+			// call a function whenever the cursor moves:
+			document.onmousemove = elementDrag;
+		  }
+
+		  function elementDrag(e) {
+			e = e || window.event;
+			e.preventDefault();
+			// calculate the new cursor position:
+			pos1 = pos3 - e.clientX;
+			pos2 = pos4 - e.clientY;
+			pos3 = e.clientX;
+			pos4 = e.clientY;
+			// set the element's new position:
+			elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+			elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+		  }
+
+		  function closeDragElement() {
+			// stop moving when mouse button is released:
+			document.onmouseup = null;
+			document.onmousemove = null;
+		  }
+		}
+	</script>
     </body>
 </html>
 
