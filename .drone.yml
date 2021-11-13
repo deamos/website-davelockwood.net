@@ -1,0 +1,23 @@
+kind: pipeline
+name: default
+
+steps:
+- name: deploy
+  image: appleboy/drone-scp
+  settings:
+    host: 192.168.0.99
+    target: /opt/website-davelockwood.net/
+    command_timeout: 2m
+    source: ./*
+    user:
+      from_secret: username
+    password:
+      from_secret: password
+    port:
+      from_secret: port
+  when:
+    branch:
+    - master
+    event:
+      exclude:
+      - pull_request
